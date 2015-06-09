@@ -20,6 +20,8 @@ source 'https://rubygems.org'
 # Use devise for authentication
 # Use pry for debugging
 # Use bootstrap css
+# Use rails_12factor bc it is required for Heroku
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
@@ -30,9 +32,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'faker'
+gem 'devise'
+gem 'bootstrap-sass'
+
 gem 'puma'
 gem 'will_paginate', '~> 3.0.5'
 gem 'fog', '1.24'
@@ -41,9 +44,7 @@ gem 'mini_magick'
 gem 'redcarpet'
 gem 'pundit'
 gem 'figaro', '1.0'
-gem 'devise'
 gem 'pry-rails'
-gem 'bootstrap-sass'
 
 # gem 'therubyracer', platforms: :ruby
 # Use ActiveModel has_secure_password
@@ -52,6 +53,10 @@ gem 'bootstrap-sass'
 # gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :doc do
+  gem 'sdoc', require: false
+end
 
 group :development do
   gem 'sqlite3'
@@ -70,4 +75,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
