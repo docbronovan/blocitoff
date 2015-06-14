@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
-  
+
+  get 'items/create'
+
   devise_for :users
+  resources :users, only: [:update, :show, :index] do
+    resources :items only[:create]
+  end
   
   get 'welcome/index'
 
   get 'welcome/about'
 
   root to: 'welcome#index'
+
+  #match 'todo' => get 'todo#index', :as => :todo
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
