@@ -2,14 +2,22 @@
   <div class="col-md-8">
     <div class="media">
       <div class="media-body">
-      <br>
+        <br>
         <h2 class="media-heading"><%= @user.name %></h2>
         <small>Member since <%= @user.created_at %></small>
         <br>
         <br>
         <p><%= pluralize(@items_count, 'item') %></p>
+        <h3><strong>Items</strong></h3>
+        <!-- Display current items -->
         <p><%= render @items %></p> 
-
+        <!-- create new item -->
+        <% if current_user.present? %>
+            <h3>Enter new items below</h3>
+            <div class='new-item'>
+              <p><%= render partial: "items/form", locals:{ item: Item.new} %></p>
+            </div>
+        <% end %>
       </div>
     </div>
   </div>
