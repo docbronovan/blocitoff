@@ -3,8 +3,7 @@
     <h1>Blocitoff</h1>
     <p>Blocitoff is a resource for getting things done!</p>
     <% if current_user %>
-      <p><%= link_to "Check your todos!", "#" %><p>
-      <small><%= link_to "Check your profile", current_user %></small>
+      <p><%= link_to "Check your todos!", current_user %></p>
     <% else %>
       <p>
       <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
