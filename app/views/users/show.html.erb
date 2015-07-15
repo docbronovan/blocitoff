@@ -7,41 +7,25 @@
         <small>Member since <%= @user.created_at %></small>
         <br>
         <br>
-        <p><%= pluralize(@items_count, 'item') %></p>
+        <p><%= pluralize(current_user.items.count, 'item') %></p>
         <h3><strong>Items</strong></h3>
         <!-- Display current items -->
-        <p><%= render @items %></p> 
-        <!-- create new item -->
         <% if current_user.present? %>
-               <div class='js-items'>
-        <p><%= render partial: 'items/item', collection: @items %></p>
-      </div>
-      <div class='new-item'>
-        <p><%= render partial: "items/form", locals: {item: Item.new} %></p>
-      </div>
+          <% @items.each do |item| %>
+            <%= render item %>
+          <% end %>
+        <!-- when new item is created with AJAX request -->
+        <div class='js-items'>
+
+        </div>
+        <div>
+          <p><%= render partial: "items/form", locals:{ item: @item} %></p> </div> 
+        </div>
+
+
         <% end %>
       </div>
+
     </div>
   </div>
 </div>
-
-<div class="row">
-  <div class="col-md-8">
-  <%= render partial: "votes/voter", locals: { post: @post } %>
-  <h1><%= markdown_to_html @post.title %></h1>
-    <small>
-       <%= image_tag(@post.user.avatar.tiny.url) if @post.user.avatar? %>
-       submitted <%= time_ago_in_words(@post.created_at) %> ago by
-       <%= @post.user.name %>
-     </small>
-    <p><%= markdown_to_html @post.body %></p>
-    <% if current_user.present? %>
-      <h3>Enter comment below</h3>
-      <p><strong>Comments</strong><p>
-      <div class='js-comments'>
-        <p><%= render partial: 'comments/comment', collection: @comments %></p>
-      </div>
-      <div class='new-comment'>
-        <p><%= render partial: "comments/form", locals: {topic: @topic, post: @post, comment: Comment.new} %></p>
-      </div>
-    <% end %>
