@@ -1,7 +1,10 @@
 <%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
   <div class="media-body">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8">
+        
+        <%= link_to "Delete", [current_user,@item], method: :delete, remote: true %>
+
         <p><strong><%= item.description %></strong><small>
           <%= time_ago_in_words(item.created_at) %> ago
         </small></p>
