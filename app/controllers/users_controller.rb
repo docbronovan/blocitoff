@@ -14,6 +14,8 @@ class UsersController < ApplicationController
    def show
     @user = current_user
     @items = @user.items
+    @incomplete = Item.where("items.completed = ?", false).where("items.user_id = ?", @user).count
+
    end
 
    private

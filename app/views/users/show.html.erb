@@ -6,8 +6,8 @@
         <h2 class="media-heading"><%= @user.name %></h2>
         <small>Member since <%= @user.created_at %></small>
         <br>
+        <p><%= pluralize(@incomplete, 'item') %></p>
         <br>
-        <p><%= pluralize(current_user.items.count, 'item') %></p>
         <h3><strong>Items</strong></h3>
         <!-- Display current items -->
         <% if current_user.present? %>

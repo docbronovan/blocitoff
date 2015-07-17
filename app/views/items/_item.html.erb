@@ -6,7 +6,7 @@
         <%= link_to "complete", item, method: :patch, remote: true %>
 
         <p><strong><%= item.description %></strong><small>
-          <%= time_ago_in_words(item.created_at) %> ago
+          <%= item.days_left %> days left
         </small></p>
       </div>
     </div>
