@@ -12,17 +12,17 @@
         <!-- Display current items -->
         <% if current_user.present? %>
           <% @items.each do |item| %>
-            <%= render item %>
+            <% if item.completed == false %>
+              <%= render item %>
+            <% end %>
           <% end %>
-        <!-- when new item is created with AJAX request -->
-        <div class='js-items'>
-
-        </div>
-        <div>
-          <p><%= render partial: "items/form", locals:{ item: @item} %></p> </div> 
-        </div>
-
-
+          <!-- when new item is created with AJAX request -->
+          <div class='js-items'>
+          </div>
+          <!-- add new item form field -->
+          <div class='new-item'>
+            <p><%= render partial: "items/form", locals:{ item: @item} %></p> 
+          </div> 
         <% end %>
       </div>
 

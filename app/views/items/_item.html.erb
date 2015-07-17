@@ -3,11 +3,12 @@
     <div class="row">
       <div class="col-md-8">
         
-        <%= link_to "Delete", [current_user,@item], method: :delete, remote: true %>
+        <%= link_to "complete", item, method: :patch, remote: true %>
 
         <p><strong><%= item.description %></strong><small>
           <%= time_ago_in_words(item.created_at) %> ago
         </small></p>
       </div>
+    </div>
   </div>
 <% end %>

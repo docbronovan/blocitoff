@@ -9,24 +9,16 @@
 require 'faker'
  
 # Create User
-1.times do
-  user = User.new(
-    name:     Faker::Name.name,
-    email:    Faker::Internet.email,
-    password: Faker::Lorem.characters(10)
-  )
-  user.skip_confirmation!
-  user.save!
-end
-users = User.all
 
-user = User.first
-user.skip_reconfirmation!
-user.update_attributes!(
- email: 'brockdonovan@gmail.com',
- password: 'fluffy11'
+user = User.new(
+  name:     Faker::Name.name,
+  email: 'brockdonovan@gmail.com',
+  password: 'fluffy11'
 )
+user.skip_confirmation!
+user.save!
 
+users = User.all
 
 # Create items
 10.times do

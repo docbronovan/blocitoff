@@ -1,0 +1,3 @@
+<% if @item.completed? %>
+  $('#item-' +<%= @item.id %>).addClass('item-complete')
+<% end %>
