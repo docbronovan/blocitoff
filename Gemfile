@@ -45,7 +45,7 @@ gem 'redcarpet'
 gem 'pundit'
 gem 'figaro', '1.0'
 gem 'pry-rails'
-
+gem 'whenever', require: false
 # gem 'therubyracer', platforms: :ruby
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
