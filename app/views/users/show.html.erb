@@ -6,7 +6,7 @@
         <h2 class="media-heading"><%= @user.name %></h2>
         <small>Member since <%= @user.created_at %></small>
         <br>
-        <p><%= pluralize(@incomplete, 'item') %></p>
+        <p id='item-count'><%= pluralize(@incomplete, 'item') %></p>
 
         <%= link_to "Update", user_path(@user), class: 'btn btn-success'%>
 

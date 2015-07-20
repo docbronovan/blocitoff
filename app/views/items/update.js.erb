@@ -1,3 +1,9 @@
 <% if @item.completed? %>
   $('#item-' +<%= @item.id %>).addClass('item-complete')
+  $('#item-' +<%= @item.id %>).find("a").text("undo")
+<% else %>
+  $('#item-' +<%= @item.id %>).removeClass('item-complete')
+  $('#item-' +<%= @item.id %>).find("a").text("complete")
 <% end %>
+
+$('#item-count').text("<%= pluralize(@incomplete, 'item')%>")

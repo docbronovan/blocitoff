@@ -1,7 +1,7 @@
 <!--  partial in a new items view directory so users can submit new items -->
 
 <%= form_for [current_user, Item.new], remote: true do |f| %>
-  <%= f.text_area :description, rows: 2, class: 'form-control form-group-sm', style: 'width:50%;', placeholder: "Enter new item here" %>
+  <%= f.text_field :description, rows: 2, class: 'form-control form-group-sm', style: 'width:50%;', placeholder: "Enter new item here", 'max-length' => 32 %>
   <div class="form-group">
     <%= f.submit "Save", class: 'btn btn-success'%>   
   </div>

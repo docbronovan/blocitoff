@@ -22,8 +22,10 @@ class ItemsController < ApplicationController
   def update
     @item = current_user.items.find(params[:id])
 
-    @item.completed = true
+    @item.completed = !@item.completed
     @item.save
+
+    @incomplete = current_user.items.where(completed: false).count
 
   end
 
