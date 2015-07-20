@@ -15,8 +15,7 @@ class UsersController < ApplicationController
    def show
     @user = current_user
     @items = @user.items
-    @incomplete = Item.where("items.completed = ?", false).where("items.user_id = ?", @user).count
-
+    @incomplete = @user.items.where(completed: false).count
    end
 
    private
