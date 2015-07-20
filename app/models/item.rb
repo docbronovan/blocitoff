@@ -7,7 +7,7 @@ class Item < ActiveRecord::Base
   default_scope { order('updated_at') }
 
   def days_left
-      7 - (DateTime.today - created_at.to_date).to_i
+      7 - (Date.today - created_at.to_date).to_i
   end
 
 end
