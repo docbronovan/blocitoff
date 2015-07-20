@@ -3,6 +3,6 @@
 <%= form_for [current_user, Item.new], remote: true do |f| %>
   <%= f.text_area :description, rows: 2, class: 'form-control form-group-sm', style: 'width:50%;', placeholder: "Enter new item here" %>
   <div class="form-group">
-    <%= f.submit "Save", class: 'btn btn-success'%>
+    <%= f.submit "Save", class: 'btn btn-success'%>   
   </div>
 <% end %>

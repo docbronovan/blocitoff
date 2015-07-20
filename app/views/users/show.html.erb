@@ -7,6 +7,10 @@
         <small>Member since <%= @user.created_at %></small>
         <br>
         <p><%= pluralize(@incomplete, 'item') %></p>
+
+        <%= link_to "Update", user_path(@user), class: 'btn btn-success'%>
+
+
         <br>
         <h3><strong>Items</strong></h3>
         <!-- Display current items -->
