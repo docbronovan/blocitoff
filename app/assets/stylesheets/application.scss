@@ -24,3 +24,60 @@
    margin-top: 5px;
  }
 
+.btn-success {
+  background-color: hsl(227, 100%, 40%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0030e0", endColorstr="#002ccc");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#0030e0), to(#002ccc));
+  background-image: -moz-linear-gradient(top, #0030e0, #002ccc);
+  background-image: -ms-linear-gradient(top, #0030e0, #002ccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0030e0), color-stop(100%, #002ccc));
+  background-image: -webkit-linear-gradient(top, #0030e0, #002ccc);
+  background-image: -o-linear-gradient(top, #0030e0, #002ccc);
+  background-image: linear-gradient(#0030e0, #002ccc);
+  border-color: #002ccc #002ccc hsl(227, 100%, 39%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
+  -webkit-font-smoothing: antialiased;}
+
+.btn-success:hover   {
+  background-color: hsl(227, 100%, 18%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001870", endColorstr="#00135b");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#001870), to(#00135b));
+  background-image: -moz-linear-gradient(top, #001870, #00135b);
+  background-image: -ms-linear-gradient(top, #001870, #00135b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #001870), color-stop(100%, #00135b));
+  background-image: -webkit-linear-gradient(top, #001870, #00135b);
+  background-image: -o-linear-gradient(top, #001870, #00135b);
+  background-image: linear-gradient(#001870, #00135b);
+  border-color: #00135b #00135b hsl(227, 100%, 17%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
+  -webkit-font-smoothing: antialiased;}
+
+/* nav bar simple */
+.navbar-simple .brand {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+.navbar-simple .navbar-inner {
+  padding :15px ;
+  font-size: 18px;
+  background: #fff;
+  filter: none !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.navbar-simple .navbar-inner .nav {
+  float: right;
+  font-size: 13px;
+}
+
+.media-body {
+  padding-left: 4%;
+  padding-right: 4%;
+}
