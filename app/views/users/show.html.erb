@@ -2,16 +2,13 @@
   <div class="col-md-12">
     <div class="media">
       <div class="media-body">
-        <br>
-        <h2 class="media-heading"><%= @user.name %></h2>
-        <small>Member since <%= @user.created_at %></small>
-        <br>
-        <p id='item-count'><%= pluralize(@incomplete, 'item') %></p>
+        <div class="row">
+          <h2 class="media-heading"><%= @user.name %></h2>
+          <small>Member since <%= @user.created_at.to_date %></small>
+          <p id='item-count'><%= pluralize(@incomplete, 'item') %></p>
+        </div>
+        <%= link_to "Update Items", user_path(@user), class: 'btn btn-info'%>
 
-        <%= link_to "Update", user_path(@user), class: 'btn btn-success'%>
-
-
-        <br>
         <h3><strong>Items</strong></h3>
         <!-- Display current items -->
         <% if current_user.present? %>

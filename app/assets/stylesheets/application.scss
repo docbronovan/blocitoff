@@ -14,20 +14,58 @@
  *= require_self
  */
 @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap";
 
- .checkbox {
+
+.checkbox {
   padding-left:4%;
- }
- 
- .user-info {
-   margin-top: 9px;
- }
- 
- .nav {
-   margin-top: 5px;
- }
+}
 
+.user-info {
+  margin-top: 9px;
+}
+
+.nav {
+  margin-top: 5px;
+}
+
+.navbar-simple .navbar-inner .nav {
+  float: right;
+  font-size: 13px;
+}
+
+.media-body {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.media-heading {
+  padding-top: 70px;
+}
+
+.col-md-8 {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.form-group {
+  padding-top: 1%;
+}
+/* nav bar simple */
+.navbar-simple .brand {
+  padding-bottom: 15px;
+}
+.navbar-simple .navbar-inner {
+  padding :15px ;
+  font-size: 18px;
+  background: #fff;
+  filter: none !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+/*custom buttons*/
 .btn-success {
   background-color: hsl(227, 100%, 40%) !important;
   background-repeat: repeat-x;
@@ -59,29 +97,3 @@
   color: #fff !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
   -webkit-font-smoothing: antialiased;}
-
-/* nav bar simple */
-.navbar-simple .brand {
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-}
-.navbar-simple .navbar-inner {
-  padding :15px ;
-  font-size: 18px;
-  background: #fff;
-  filter: none !important;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
-  -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-.navbar-simple .navbar-inner .nav {
-  float: right;
-  font-size: 13px;
-}
-
-.media-body {
-  padding-left: 4%;
-  padding-right: 4%;
-}

@@ -7,4 +7,17 @@ class User < ActiveRecord::Base
 
   has_many :items
 
+  def admin?
+    role == 'admin'
+  end
+
+  def standard?
+    role == 'standard'
+  end
+
+  def premium?
+    role == 'premium'
+  end
+
+
 end
