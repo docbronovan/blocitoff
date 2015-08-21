@@ -10,8 +10,6 @@ class ItemsController < ApplicationController
       flash[:error] = "There was an error saving the item. Please try again."
     end
 
-    #redirect_to current_user
-
     respond_to do |format|
       format.html
       format.js
@@ -20,13 +18,12 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = current_user.items.find(params[:id])
 
+    @item = current_user.items.find(params[:id])
     @item.completed = !@item.completed
     @item.save
-
     @incomplete = current_user.items.where(completed: false).count
-
+  
   end
 
 end

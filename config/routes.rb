@@ -2,19 +2,14 @@ Rails.application.routes.draw do
 
   get 'items/create'
 
-  #devise_for :users
   devise_for :users, :controllers => { :registrations => :registrations }
   resources :users, only: [:update, :show, :index] do
     resources :items,  shallow: true
   end
   
   get 'welcome/index'
-
   get 'welcome/about'
-
   root to: 'welcome#index'
-
-  #match 'todo' => get 'todo#index', :as => :todo
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

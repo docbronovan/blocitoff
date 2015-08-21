@@ -22,9 +22,6 @@ source 'https://rubygems.org'
 # Use bootstrap css
 # Use rails_12factor bc it is required for Heroku
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-
 gem 'rails', '4.2.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -47,13 +44,6 @@ gem 'figaro', '1.0'
 gem 'pry-rails'
 gem 'whenever', require: false
 gem 'raygun4ruby'
-# gem 'therubyracer', platforms: :ruby
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-# Use Unicorn as the app server
-# gem 'unicorn'
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :doc do
   gem 'sdoc', require: false

@@ -1,13 +1,10 @@
 <%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
-    <div class="row">
-      <div class="col-md-10">
-        
-        <%= link_to "complete", item, method: :patch, remote: true %>
-
-        <p><strong><%= item.description %></strong><small>
-          <%= item.days_left %> days left
-        </small></p>
-        
-      </div>
+  <div class="row">
+    <div class="col-md-10">      
+      <%= link_to "complete", item, method: :patch, remote: true %>
+      <p><strong><%= item.description %></strong><small>
+        <%= item.days_left %> days left
+      </small></p>
     </div>
+  </div>
 <% end %>
