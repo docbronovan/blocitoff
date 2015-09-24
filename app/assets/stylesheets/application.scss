@@ -16,7 +16,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+/*.top-text {
+  padding-top: 15px;
+}*/
 .checkbox {
   padding-left:4%;
 }
@@ -39,19 +41,19 @@
   padding-right: 4%;
 }
 
-div.col-md-10 {
+.col-md-10 {
   padding-top: 1%;
 }
 
-div.container {
+.container {
   padding-top: 70px;
   padding-left: 6%;
 }
-div.col-md-9-offset-2 {
+.col-md-9-offset-2 {
   padding-top: 70px;
 }
 
-div.form-group.save {
+.form-group.save {
   margin-top: 15px;
 }
 /* nav bar simple */
